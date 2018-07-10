@@ -8,3 +8,9 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+
+// a reducer is a JS function
+//  it accepts 2 params: current state and an action
+
+// state is immutable, hence reducer needs to be a
+//  pure function
