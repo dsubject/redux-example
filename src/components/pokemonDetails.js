@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 class PokemonDetails extends Component {
 	render() {
 		if (!this.props.pokemon) {
 			return (
-				<div>Click on a Pokemon :-)</div>
+				<div className="item2">Click on a Pokemon :-)</div>
 			);
 		}
 		return (
-			<div>
-				<h4>Name: {this.props.pokemon.name}</h4>
-        <h4>Type: {this.props.pokemon.type}</h4>
-        <img src={this.props.pokemon.image} />
+			<div className="item2">
+				<div className="title-style">
+					<h4 id="name-style">Type: {this.props.pokemon.type}</h4>
+					<h4 id="type-style">Species: {this.props.pokemon.species}</h4>
+				</div>
+				<div>
+					<img className="item-details-image" src={this.props.pokemon.image} />
+				</div>
 			</div>
 		);
 	}

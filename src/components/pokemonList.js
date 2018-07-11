@@ -2,22 +2,30 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import selectPokemon from '../actions/current_pokemon'
 import { bindActionCreators } from 'redux'
+import Card from './card'
 
 class PokemonList extends Component {
   renderPokemon() {
     return this.props.pokemon.map((pokemon) => {
       return (
-        <li
-          key={pokemon.name}
-          onClick={() => this.props.selectPokemon(pokemon)}>{pokemon.name}</li>
+        <Card>
+          <div className="list-item-style">
+            <img
+              src={pokemon.image}
+              className="item-image"
+              key={pokemon.name}
+              onClick={() => this.props.selectPokemon(pokemon)} />
+            <div>{pokemon.name}</div>
+          </div>
+        </Card>
       );
     });
   }
   render() {
     return (
-      <ul>
-        {this.renderPokemon()}
-      </ul>
+      <div className="item1">
+          {this.renderPokemon()}
+      </div>
     );
   }
 }
