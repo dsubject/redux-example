@@ -7,8 +7,8 @@ import { POKEMON_SELECTED } from "../constants/redux";
 // dispatching an action means signalling
 //  to the store that state needs to change
 
-// an action is just a JS object but should be wrapped
-//  in a function
+// an action is just a JS object that describes what
+//  changed in the app
 
 function selectPokemon(pokemon) {
     return {
