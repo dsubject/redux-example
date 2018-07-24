@@ -10,6 +10,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
 // the state of the whole app lives inside the store
+// the store holds all three principles of redux: 
+//      the state, the actions, the reducer function
 const store = applyMiddleware()(createStore);
 
 ReactDOM.render(
